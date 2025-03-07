@@ -1,0 +1,14 @@
+# Ignore Python & Django files
+backend/__pycache__/
+backend/*.pyc
+backend/db.sqlite3
+backend/.env
+**/migrations/*.pyc
+**/migrations/__pycache__/
+
+# Ignore Node.js & React files
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/.env
+
