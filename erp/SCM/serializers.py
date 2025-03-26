@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import PurchaseOrder, PurchaseOrderItem
+from .models import PurchaseOrder, PurchaseOrderItem,Provedor
 
 class PurchaseOrderItemSerializer(serializers.ModelSerializer):
     class Meta:
@@ -24,3 +24,8 @@ class PurchaseOrderSerializer(serializers.ModelSerializer):
         purchase_order.calculate_total_cost()
         return purchase_order
 
+
+class ProviderSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Provedor
+        fields = '__all__'

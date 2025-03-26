@@ -1,11 +1,7 @@
-from django.urls import path, include
-from rest_framework.routers import DefaultRouter
-from .views import PurchaseOrderViewSet
-
-router = DefaultRouter()
-router.register(r'purchase-orders', PurchaseOrderViewSet)
+from django.urls import path
+from .views import ProviderList  # Ensure you import the correct view
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path('providers/', ProviderList.as_view(), name='provider-list'),
 ]
 

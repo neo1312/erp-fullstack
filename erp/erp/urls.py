@@ -3,8 +3,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('crm.urls')),  # ✅ Correct way
-    path('api/', include('SCM.urls')),  # ✅ Correct way
-    
+    path('api/crm/', include('crm.urls')),  # CRM API
+    path('api/scm/', include('SCM.urls')),  # SCM API
 ]
-
